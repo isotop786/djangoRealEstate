@@ -1,13 +1,38 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BT Real Estate</title>
+    <title>Maruf's Real Estate</title>
+      <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'css/all.css' %}">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+  <!-- Custom -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}  ">
+  <!-- lightbox -->
+  <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}  ">
 </head>
 <body>
+    {% comment %} topbar {% endcomment %}
+    {% include 'inc/_topbar.html' %}
+    {% include 'inc/_navbar.html' %}
+
+
+
     {% block content %}
 
     {% endblock %}
+
+  
+  
+  
+  {% include 'inc/_footer.html' %}
+  <script src="{% static '/js/jquery-3.3.1.min.js' %}  "></script>
+  <script src="{% static '/js/bootstrap.bundle.min.js' %}  "></script>
+  <script src="{% static '/js/lightbox.min.js' %}  "></script>
+  <script src="{% static '/js/main.js' %}"></script>
 </body>
 </html>
